@@ -75,6 +75,8 @@ margin-left: 80px;
     margin-left: 350px;
     display: flex;
     justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .main-content input {
     margin-top: 70px;
@@ -114,7 +116,103 @@ background-repeat: no-repeat;
 }
 
 
-/* Media Queries abaixo */
+
+
+/* Parâmetros da lista de tarefas abaixo */
+.addBtn {
+    position: relative;
+    padding: 10px 20px;
+    margin-top: 15px;
+    font-size: 16px;
+    background-color: #A18AFF;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    border-color: #ffffff;
+    border-style: solid;
+    cursor: pointer;
+}
+.addBtn:hover {
+    background-color: #0056b3;
+}
+
+.tarefas {
+    margin-left: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  ul li {
+    position: relative;
+    cursor: pointer;
+    padding: 12px 8px 12px 40px;
+    background: #eee;
+    font-size: 15px;
+    transition: 0.2s;
+    border-radius: 8px;
+    list-style: none;
+    width: 510px;
+    word-wrap: break-word;
+    margin-top: 20px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  
+  
+ 
+  ul li:nth-child(odd) {
+    background: #f9f9f9;
+  }
+  
+ 
+  ul li:hover {
+    background: #ddd;
+  }
+  
+
+  ul li.checked {
+    background: #888;
+    color: #fff;
+    text-decoration: line-through;
+  }
+  
+  
+  ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+  }
+  .close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+  }
+  
+  .close:hover {
+    background-color: #f44336;
+    color: white;
+  }
+/* Parâmetros da lista de tarefas acima */
+
+  /* Media Queries abaixo */
 @media (max-width: 700px) {
     .sidebar {
         display: none;
@@ -129,9 +227,28 @@ background-repeat: no-repeat;
     }
     .main-content input {
         display: block;
-        width: 50vh;
+        width: 90vw;
+        margin-left: 350px;
         margin-right: 350px;
     }
+    .main-content  {
+        margin-left: 0;
+    }
+    .tarefas-content {
+        margin-right: 0;
+        align-items: center;
+        justify-content: center;
+    }
+    .tarefas {
+        margin-left: 0;
+    }
+    ul li {
+        width: 75vw;
+        word-wrap: break-word;
+    }
+    
+
+
     /* Parâmetros dos botões para o layout mobile abaixo*/
     .mobile-buttons {
         display: flex;
@@ -177,6 +294,3 @@ background-repeat: no-repeat;
        text-align: center;
 }
 }
-
-    
-

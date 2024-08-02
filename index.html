@@ -9,6 +9,7 @@
 </head>
 <body>
     <header>
+        <script src="script.js" defer></script>
     <div class="sidebar">
         <div class="main-sidebar">
             <div class="sidebar-icon2" >
@@ -57,6 +58,13 @@
     </div>
     <div class="main-content">
         <input class="task-input" type="text" id="myInput" placeholder="Qual é a sua próxima tarefa?">
+        <div class="botao" >
+        <button onclick="newElement()" class="addBtn">Adicionar Tarefa</button>
+    </div>
+    </div>
+    <div class="tarefas-content" >
+    <ul id="myUL" class="tarefas" >
+      </ul>
     </div>
 </body>
 </html>
